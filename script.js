@@ -53,7 +53,7 @@ contactForm.addEventListener('submit', function(e) {
     const whatsappMessage = `Olá! Meu nome é ${nome}.%0A%0AE-mail: ${email}%0ATelefone: ${telefone}%0A%0AMensagem: ${mensagem}`;
     
     // Open WhatsApp
-    window.open(`https://wa.me/5511999999999?text=${whatsappMessage}`, '_blank');
+    window.open(`https://wa.me/5512981754136?text=${whatsappMessage}`, '_blank');
     
     // Reset form
     this.reset();
