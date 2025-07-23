@@ -420,7 +420,7 @@ body {
     margin-bottom: 2rem;
 }
 
-.photo-placeholder {
+/* .photo-placeholder {
     width: 120px;
     height: 120px;
     background: rgba(0, 212, 255, 0.1);
@@ -428,6 +428,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
+    color: #00d4ff;
+    border: 2px solid rgba(0, 212, 255, 0.3);
+} */
+
+.photo-placeholder img {
+    border-radius: 50%; /* Transforma a imagem em um círculo perfeito */
+    object-fit: cover;  /* Garante que a foto preencha o círculo sem distorcer */
     margin: 0 auto;
     color: #00d4ff;
     border: 2px solid rgba(0, 212, 255, 0.3);
