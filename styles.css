@@ -51,13 +51,22 @@ body {
     gap: 15px; 
 }
 
-.logo {
+/* .logo {
     font-size: 1.8rem;
     font-weight: 700;
     color: #00d4ff;
     text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
     margin: 0;
+    transition: all 0.3s ease;
 }
+
+.logo:hover{
+    color: #ffffff;
+    text-shadow: 0 0 30px rgba(0, 153, 204, 0.5);
+        filter: drop-shadow(0 0 2px rgb(0, 213, 255))
+            drop-shadow(0 0 5px rgba(0, 213, 255, 0.712))
+            drop-shadow(0 0 10px rgba(0, 213, 255, 0.356));
+} */
 
 .logo-img { /* ou o seletor correto para o seu logo */
   transition: all 0.3s ease; /* Para uma transição suave */
