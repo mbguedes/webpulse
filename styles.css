@@ -59,6 +59,18 @@ body {
     margin: 0;
 }
 
+.logo-img { /* ou o seletor correto para o seu logo */
+  transition: all 0.3s ease; /* Para uma transição suave */
+}
+
+.logo-img:hover {
+  /* Adiciona múltiplas camadas de sombra para criar um brilho forte */
+    filter: drop-shadow(0 0 2px rgb(0, 213, 255))
+            drop-shadow(0 0 5px rgba(0, 213, 255, 0.712))
+            drop-shadow(0 0 10px rgba(0, 213, 255, 0.356));
+}
+
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -264,13 +276,44 @@ body {
     background: #0a0a0a;
 }
 
+/* --- GRID ATUALIZADO --- */
+/* Para telas de desktop, usamos um grid fixo de 3 colunas */
 .solutions-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* << MUDANÇA PRINCIPAL */
     gap: 2rem;
     margin-top: 4rem;
 }
 
+/* Regra nova para mover o 4º card para a coluna do meio */
+.solutions-grid .solution-card:nth-child(4) {
+    grid-column-start: 2;
+}
+
+/* --- RESPONSIVIDADE ADICIONADA --- */
+/* Ajuste para tablets */
+@media (max-width: 992px) {
+    .solutions-grid {
+        grid-template-columns: repeat(2, 1fr); /* Layout com 2 colunas */
+    }
+
+    .solutions-grid .solution-card:nth-child(4) {
+        grid-column-start: auto; /* Reseta o posicionamento para o fluxo normal */
+    }
+}
+
+/* Ajuste para celulares */
+@media (max-width: 768px) {
+    .solutions-grid {
+        grid-template-columns: 1fr; /* Layout com 1 coluna */
+    }
+    /* O reset da regra do 4º card não é necessário aqui,
+       pois ele já se ajusta naturalmente no layout de 1 coluna. */
+}
+/* --- FIM DAS ATUALIZAÇÕES --- */
+
+
+/* Estilos dos cards (permanecem os mesmos) */
 .solution-card {
     background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
     padding: 2.5rem;
@@ -303,7 +346,6 @@ body {
 .solution-card p {
     color: #cccccc;
 }
-
 /* Clients Section */
 .clients {
     padding: 6rem 0;
